@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DispatcherForm</title>
+
+<style>
+	
+	#before[required] + label {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	#before[required] + label:before {
+	  content: "\2709";
+	  position: absolute;
+	  right: 0.5em;
+	  bottom: 0.01em;
+	  font-size: 20px; 
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<form action="RequestDispatcherServlet" method="get"> 
+		<table>
+			<tr>
+				<td>Имя</td>
+				<td><input type=text name=FirstName  placeholder="Имя" id="before" required> <label for="before">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td>Фамилия</td>	 
+				<td><input type=text name=SecondName placeholder="Фамилия" id="before" required> <label for="before">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td>Группа</td>
+				<td><input type=text name=Group placeholder="Группа" id="before" required> <label for="before">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td>Номер задачи</td> 
+				<td><input type=text name=TaskNumber placeholder="Номер задачи" id="before" required>  <label for="before">&nbsp;</label> </td>
+			</tr>
+			<tr>
+				<td align="right" colspan="2"><input type=submit value=Отправить></td>
+		    </tr>
+		</table>
+	</form>
+</body>
+</html>

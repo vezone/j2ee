@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DispatcherForm</title>
+
+<style>
+	
+	#before[required] + label {
+	  position: relative;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	#before[required] + label:before {
+	  content: "\2709";
+	  position: absolute;
+	  right: 0.5em;
+	  bottom: 0.01em;
+	  font-size: 20px; 
+	}
+	
+</style>
+
+</head>
+<body>
+
+	<form action="RequestDispatcherMoneyServlet" method="get"> 
+		<table>
+			<tr>
+				<td>Количество валюты</td>
+				<td><input type=text name=Money placeholder="Сумма" id="before" required> <label for="before">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td>Курс</td>	 
+				<td><input type=text name=ExchangeRate placeholder="Курс" id="before" required> <label for="before">&nbsp;</label></td>
+			</tr>
+			<tr>
+				<td align="right" colspan="2"><input type=submit value=Отправить></td>
+		    </tr>
+		</table>
+	</form>
+</body>
+</html>
